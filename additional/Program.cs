@@ -41,4 +41,9 @@ InputArray(array);
 Console.WriteLine("Ishodnyj massiv: [" + string.Join(", ", array) + "]");
 Console.Write("Vvedite chislo K = ");
 int K = Convert.ToInt32(Console.ReadLine());
+if (Math.Abs(K)>array.Length)
+{
+    Console.WriteLine("Vvedite chislo |K| < " + array.Length);
+    K = Convert.ToInt32(Console.ReadLine());
+}
 Sdvig(array, K);
