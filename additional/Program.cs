@@ -27,7 +27,7 @@ void Sdvig(int[] array, int K)
     }
     else
     {
-        int N = (-1) * K;
+        int N = Math.Abs(K);
         for (int i = 0; i < array.Length - N; i++)
             ResultArray[i] = array[N + i];
         for (int i = 0; i < N; i++)
@@ -43,7 +43,7 @@ Console.Write("Vvedite chislo K = ");
 int K = Convert.ToInt32(Console.ReadLine());
 if (Math.Abs(K)>array.Length)
 {
-    Console.WriteLine("Vvedite chislo |K| < " + array.Length);
+    Console.WriteLine("Vvedite chislo |K| <= " + array.Length);
     K = Convert.ToInt32(Console.ReadLine());
 }
 Sdvig(array, K);
